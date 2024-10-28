@@ -1,3 +1,5 @@
+import java.awt.*;
+
 public class Square extends Shape {
     private double side;
 
@@ -17,5 +19,12 @@ public class Square extends Shape {
     @Override
     public double calculateArea() {
         return side * side;
+    }
+
+    @Override
+    public void draw(Graphics g) {
+        g.setColor(Color.decode(color));
+        g.drawRect(100, 100, (int)side, (int)side); // Example coordinates
+        g.fillRect(100, 100, (int)side, (int)side);
     }
 }

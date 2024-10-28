@@ -1,4 +1,6 @@
-public class Shape {
+import java.awt.*;
+
+abstract class Shape {
     protected String color;
 
     public Shape(String color) {
@@ -16,4 +18,6 @@ public class Shape {
     public double calculateArea() {
         return 0.0;
     }
+
+    public abstract void draw(Graphics g);
 }
